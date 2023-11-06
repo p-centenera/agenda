@@ -19,9 +19,21 @@ public class Contacto implements Serializable{
 		nombre=n;
 		telefono=t;
  	}
+	public Contacto(String n){
+		nombre=n;
+		telefono="";
+ 	}
 	public String toString(){
 		return "Nombre: "+nombre+" Telefono: "+telefono;
 	}
+	public String getTelefono(){
+		return telefono;
+	}
+	public boolean equals(Object obj){
+		Contacto c=(Contacto)obj;
+		return c.nombre.equals(nombre);
+	}
+
 }
 
 

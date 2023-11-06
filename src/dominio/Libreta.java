@@ -36,5 +36,14 @@ public class Libreta implements Serializable{
 			cadena+=c+"\n";
 		return cadena;
 	}
+
+	public Libreta del(String nombre){
+		lista.remove(new Contacto(nombre));
+		return this;
+	}
+	public Contacto search(String n){
+		int i=lista.indexOf(new Contacto(n));
+		return lista.get(i);
+	}
 }
 

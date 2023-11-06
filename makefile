@@ -17,7 +17,7 @@ jar:compilar
 	@echo "" >> manifest.txt	
 	jar cfm $(JAR_FILE) manifest.txt  -C $(LIB_DIR) . -C  $(OUT_DIR) . 
 ejecutar:compilar
-	java -cp "$(OUT_DIR):$(CLASSPATH)" $(MAIN_CLASS)
+	java -cp "$(OUT_DIR)" $(MAIN_CLASS)
 limpiar:
 	rm -rf $(OUT_DIR)
 	rm -rf $(DOC_DIR)
